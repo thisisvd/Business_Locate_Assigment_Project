@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.vdcodeassociate.businesslocateassigmentproject.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_businessLoginFragment"
+            app:destination="@id/businessLoginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_OTPVerificationFragment3"
+            app:destination="@id/OTPVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessLoginFragment"
+        android:name="com.vdcodeassociate.businesslocateassigmentproject.BusinessLoginFragment"
+        android:label="Business Login"
+        tools:layout="@layout/fragment_business_login" />
+    <fragment
+        android:id="@+id/OTPVerificationFragment"
+        android:name="com.vdcodeassociate.businesslocateassigmentproject.OTPVerificationFragment"
+        android:label="fragment_o_t_p_verification"
+        tools:layout="@layout/fragment_o_t_p_verification" />
+    <fragment
+        android:id="@+id/businessSignUpFragment"
+        android:name="com.vdcodeassociate.businesslocateassigmentproject.BusinessSignUpFragment"
+        android:label="fragment_business_sign_up"
+        tools:layout="@layout/fragment_business_sign_up" />
+</navigation>

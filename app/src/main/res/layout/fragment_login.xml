@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".LoginFragment">
+
+    <ImageButton
+        android:id="@+id/login_skip"
+        android:contentDescription="None"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/skip_img"
+        android:layout_gravity="end"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_phone_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:errorEnabled="true"
+        app:errorTextColor="#B1001A"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/signinTextView2"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_phone"
+            android:layout_width="match_parent"
+            android:drawableStart="@drawable/ic_baseline_smartphone_24"
+            android:drawablePadding="10dp"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:textSize="18sp"
+            android:ems="10"
+            android:inputType="textEmailAddress"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/login_sendotp_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#42CD48"
+        android:padding="10dp"
+        android:layout_below="@+id/forgotPasswordSignIn"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:onClick="goToOTP"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="end">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are you a "
+            android:textStyle="bold"
+            android:textColor="#3F4542"/>
+
+        <TextView
+            android:id="@+id/login_business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/business"
+            android:textStyle="bold"
+            android:textColor="#5826FF"/>
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" ?"
+        android:textStyle="bold"
+        android:textColor="#3F4542"/>
+
+    </LinearLayout>
+
+</LinearLayout>
