@@ -1,14 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OTPVerificationFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".OTPVerificationFragment"
+    android:padding="30sp"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otp_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:errorEnabled="true"
+        app:errorTextColor="#B1001A"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_below="@+id/signinTextView2"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp" >
 
-</FrameLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otp_editText"
+            android:layout_width="match_parent"
+            android:drawableStart="@drawable/ic_baseline_smartphone_24"
+            android:drawablePadding="10dp"
+            android:layout_height="wrap_content"
+            android:hint="O T P"
+            android:textSize="18sp"
+            android:ems="10"
+            android:inputType="textEmailAddress"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/otp_verify_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#42CD48"
+        android:padding="10dp"
+        android:layout_below="@+id/forgotPasswordSignIn"
+        android:text="Verify"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:onClick="goToOTP"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/otp_resend_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="15dp"
+        android:text="RESEND CODE"
+        android:textColor="#5826FF"
+        android:textStyle="bold" />
+
+</LinearLayout>

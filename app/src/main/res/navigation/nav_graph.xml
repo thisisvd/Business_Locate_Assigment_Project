@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_loginFragment_to_OTPVerificationFragment3"
             app:destination="@id/OTPVerificationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeScreenFragment"
+            app:destination="@id/welcomeScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/businessLoginFragment"
@@ -26,10 +29,19 @@
         android:id="@+id/OTPVerificationFragment"
         android:name="com.vdcodeassociate.businesslocateassigmentproject.OTPVerificationFragment"
         android:label="fragment_o_t_p_verification"
-        tools:layout="@layout/fragment_o_t_p_verification" />
+        tools:layout="@layout/fragment_o_t_p_verification" >
+        <action
+            android:id="@+id/action_OTPVerificationFragment_to_welcomeScreenFragment"
+            app:destination="@id/welcomeScreenFragment" />
+    </fragment>
     <fragment
         android:id="@+id/businessSignUpFragment"
         android:name="com.vdcodeassociate.businesslocateassigmentproject.BusinessSignUpFragment"
         android:label="fragment_business_sign_up"
         tools:layout="@layout/fragment_business_sign_up" />
+    <fragment
+        android:id="@+id/welcomeScreenFragment"
+        android:name="com.vdcodeassociate.businesslocateassigmentproject.WelcomeScreenFragment"
+        android:label="fragment_welcome_screen"
+        tools:layout="@layout/fragment_welcome_screen" />
 </navigation>

@@ -8,15 +8,6 @@
     android:padding="30dp"
     tools:context=".LoginFragment">
 
-    <ImageButton
-        android:id="@+id/login_skip"
-        android:contentDescription="None"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/skip_img"
-        android:layout_gravity="end"/>
-
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/login_phone_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -40,7 +31,7 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/login_sendotp_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1052438915926",
+    "project_id": "fir-retest-app",
+    "storage_bucket": "fir-retest-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052438915926:android:8195ceea2232d37040c4f7",
+        "android_client_info": {
+          "package_name": "com.vdcodeassociate.businesslocateassigmentproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052438915926-h709vcsgi7orirbptjm3uharks46qltl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnOEzJGMEo6b-R1Ca8Eait381j_sgmRQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1052438915926-h709vcsgi7orirbptjm3uharks46qltl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052438915926:android:8180326a35dec74140c4f7",
+        "android_client_info": {
+          "package_name": "com.vdcodeassociate.firebase_retest_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052438915926-h709vcsgi7orirbptjm3uharks46qltl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnOEzJGMEo6b-R1Ca8Eait381j_sgmRQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1052438915926-h709vcsgi7orirbptjm3uharks46qltl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
