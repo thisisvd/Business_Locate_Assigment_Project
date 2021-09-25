@@ -50,7 +50,6 @@ class LoginFragment : Fragment() {
 
 //                sendOTP(view)
 
-
             }
 
         view?.findViewById<TextView>(R.id.login_business)
