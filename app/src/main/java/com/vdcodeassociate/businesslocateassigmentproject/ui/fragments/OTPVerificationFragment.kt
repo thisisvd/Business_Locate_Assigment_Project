@@ -1,4 +1,4 @@
-package com.vdcodeassociate.businesslocateassigmentproject
+package com.vdcodeassociate.businesslocateassigmentproject.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.button.MaterialButton
+import com.vdcodeassociate.businesslocateassigmentproject.R
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

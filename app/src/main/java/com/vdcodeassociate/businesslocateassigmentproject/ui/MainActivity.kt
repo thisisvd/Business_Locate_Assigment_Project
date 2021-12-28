@@ -1,8 +1,9 @@
-package com.vdcodeassociate.businesslocateassigmentproject
+package com.vdcodeassociate.businesslocateassigmentproject.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
+import com.vdcodeassociate.businesslocateassigmentproject.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

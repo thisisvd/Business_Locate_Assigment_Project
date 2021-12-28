@@ -3,4 +3,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="business"><u>Business</u></string>
+    <string name="signUp"><u>Sign Up</u></string>
+    <string name="signIn"><u>Sign In</u></string>
 </resources>

@@ -3,31 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment">
-
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.vdcodeassociate.businesslocateassigmentproject.LoginFragment"
-        android:label="Login"
-        tools:layout="@layout/fragment_login">
-        <action
-            android:id="@+id/action_loginFragment_to_businessLoginFragment"
-            app:destination="@id/businessLoginFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_OTPVerificationFragment3"
-            app:destination="@id/OTPVerificationFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_welcomeScreenFragment"
-            app:destination="@id/welcomeScreenFragment" />
-    </fragment>
+    app:startDestination="@id/businessLoginFragment">
     <fragment
         android:id="@+id/businessLoginFragment"
-        android:name="com.vdcodeassociate.businesslocateassigmentproject.BusinessLoginFragment"
+        android:name="com.vdcodeassociate.businesslocateassigmentproject.ui.fragments.BusinessLoginFragment"
         android:label="Business Login"
         tools:layout="@layout/fragment_business_login" />
     <fragment
         android:id="@+id/OTPVerificationFragment"
-        android:name="com.vdcodeassociate.businesslocateassigmentproject.OTPVerificationFragment"
+        android:name="com.vdcodeassociate.businesslocateassigmentproject.ui.fragments.OTPVerificationFragment"
         android:label="fragment_o_t_p_verification"
         tools:layout="@layout/fragment_o_t_p_verification" >
         <action
@@ -36,12 +20,12 @@
     </fragment>
     <fragment
         android:id="@+id/businessSignUpFragment"
-        android:name="com.vdcodeassociate.businesslocateassigmentproject.BusinessSignUpFragment"
+        android:name="com.vdcodeassociate.businesslocateassigmentproject.ui.fragments.BusinessSignUpFragment"
         android:label="fragment_business_sign_up"
         tools:layout="@layout/fragment_business_sign_up" />
     <fragment
         android:id="@+id/welcomeScreenFragment"
-        android:name="com.vdcodeassociate.businesslocateassigmentproject.WelcomeScreenFragment"
+        android:name="com.vdcodeassociate.businesslocateassigmentproject.ui.fragments.WelcomeScreenFragment"
         android:label="fragment_welcome_screen"
         tools:layout="@layout/fragment_welcome_screen" />
 </navigation>
