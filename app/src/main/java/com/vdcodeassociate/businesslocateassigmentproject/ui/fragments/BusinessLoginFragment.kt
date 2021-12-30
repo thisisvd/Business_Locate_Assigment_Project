@@ -3,6 +3,7 @@ package com.vdcodeassociate.businesslocateassigmentproject.ui.fragments
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,17 +11,31 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.FirebaseApp
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.vdcodeassociate.businesslocateassigmentproject.R
 import com.vdcodeassociate.businesslocateassigmentproject.databinding.FragmentBusinessLoginBinding
 
 class BusinessLoginFragment : Fragment(R.layout.fragment_business_login) {
 
+    // TAG
+    private final val TAG = "BusinessLoginFragment"
+
     // viewBinding
     private lateinit var binding: FragmentBusinessLoginBinding
+
+    // Firebase
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentBusinessLoginBinding.bind(view)
+
+        // init Firebase auth
+        FirebaseApp.initializeApp(requireContext())
+        firebaseAuth = Firebase.auth
 
         binding.apply {
 
@@ -39,14 +54,28 @@ class BusinessLoginFragment : Fragment(R.layout.fragment_business_login) {
     }
 
     // user exist firebase
-    private fun loginViaFirebase(){
+    private fun loginViaFirebase(email: String, password: String){
+        firebaseAuth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(requireActivity()) { task ->
+                if (task.isSuccessful) {
+                    Log.d(TAG, "signInWithEmail:success")
 
+                } else {
+                    Log.w(TAG, "signInWithEmail:failure", task.exception)
+                    Toast.makeText(requireContext(), "Authentication failed.",
+                        Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 
     // proceed login
-    private fun login(){
-        if(!isTextEmpty()){
-            Toast.makeText(requireContext(),"Logined",Toast.LENGTH_SHORT).show()
+    private fun login() {
+        binding.apply {
+
+            if (!isTextEmpty()) {
+                loginViaFirebase(email.text.toString(),password.text.toString())
+            }
+
         }
     }
 
