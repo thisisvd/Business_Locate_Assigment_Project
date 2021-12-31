@@ -32,6 +32,8 @@
         android:id="@+id/passwordLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/theme_green"
         app:errorTextColor="#B1001A"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >

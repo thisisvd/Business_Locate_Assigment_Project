@@ -32,6 +32,8 @@
         android:id="@+id/passwordLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/theme_green"
         app:errorTextColor="#B1001A"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
@@ -50,20 +52,22 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/repasswordLayout"
+        android:id="@+id/reTypePasswordLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/theme_green"
         app:errorTextColor="#B1001A"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/repassword"
+            android:id="@+id/reTypePassword"
             android:layout_width="match_parent"
             android:drawableStart="@drawable/ic_baseline_lock_24"
             android:drawablePadding="10dp"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="Re-Type Password"
             android:textSize="18sp"
             android:ems="10"
             android:inputType="textPassword"/>

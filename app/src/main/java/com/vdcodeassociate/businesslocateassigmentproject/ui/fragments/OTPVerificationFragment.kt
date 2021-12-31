@@ -1,6 +1,8 @@
 package com.vdcodeassociate.businesslocateassigmentproject.ui.fragments
 
 import android.os.Bundle
+import android.os.CountDownTimer
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,37 +12,32 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.button.MaterialButton
 import com.vdcodeassociate.businesslocateassigmentproject.R
+import com.vdcodeassociate.businesslocateassigmentproject.databinding.FragmentOTPVerificationBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class OTPVerificationFragment : Fragment(R.layout.fragment_o_t_p_verification) {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [OTPVerificationFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class OTPVerificationFragment : Fragment() {
+    // viewBinding
+    private lateinit var binding: FragmentOTPVerificationBinding
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_o_t_p_verification, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentOTPVerificationBinding.bind(view)
 
-        view?.findViewById<MaterialButton>(R.id.otp_verify_button)
-            ?.setOnClickListener {
-                findNavController().navigate(R.id.action_OTPVerificationFragment_to_welcomeScreenFragment)
+        val timer = object: CountDownTimer(20000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                    Log.d("TAGU","Check Hua! $millisUntilFinished")
+                if(millisUntilFinished < 5000) {
+//                    timer.cancel()
+                }
             }
 
-        view?.findViewById<TextView>(R.id.otp_resend_code)
-            ?.setOnClickListener {
-                Toast.makeText(activity,"CODE SEND AGAIN!",Toast.LENGTH_SHORT).show()
+            override fun onFinish() {
+                Log.d("TAGU","Khatam tata bye bye!")
             }
+        }
+        timer.start()
 
-        return view
+
     }
 
 }

@@ -96,6 +96,9 @@ class BusinessLoginFragment : Fragment(R.layout.fragment_business_login) {
             if (password.text.isNullOrEmpty()) {
                 isTextEmpty = true
                 passwordLayout.error = "Registered password required!"
+            } else if (password.text.toString().length < 6) {
+                isTextEmpty = true
+                passwordLayout.error = "Password length can't be smaller than 6!"
             }
 
         }
