@@ -16,6 +16,9 @@ import com.vdcodeassociate.businesslocateassigmentproject.databinding.FragmentOT
 
 class OTPVerificationFragment : Fragment(R.layout.fragment_o_t_p_verification) {
 
+    // TAG
+    private val TAG = "OTPVerificationFragment"
+
     // viewBinding
     private lateinit var binding: FragmentOTPVerificationBinding
 
@@ -23,20 +26,19 @@ class OTPVerificationFragment : Fragment(R.layout.fragment_o_t_p_verification) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentOTPVerificationBinding.bind(view)
 
-        val timer = object: CountDownTimer(20000, 1000) {
+        val timer = object : CountDownTimer(20000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                    Log.d("TAGU","Check Hua! $millisUntilFinished")
-                if(millisUntilFinished < 5000) {
+                Log.d(TAG, "Check Hua! $millisUntilFinished")
+                if (millisUntilFinished < 5000) {
 //                    timer.cancel()
                 }
             }
 
             override fun onFinish() {
-                Log.d("TAGU","Khatam tata bye bye!")
+                Log.d("TAGU", "Khatam tata bye bye!")
             }
         }
         timer.start()
-
 
     }
 
